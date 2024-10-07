@@ -42,60 +42,7 @@
 		const data = await response.json();
 		return data.result;
 	}
-	function extractAddressInfo(address) {
-		// Split the address by commas
-		const parts = address.split(',').map((part) => part.trim());
 
-		// Initialize placeholders for address components
-		let streetAddress = null;
-		let city = null;
-		let province = null;
-		let postalCode = null;
-		let country = null;
-
-		// Regex patterns for postal code (Canadian), province (two-letter abbreviation)
-		const postalCodePattern = /[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d/;
-		const provincePattern = /\b(?:AB|BC|MB|NB|NL|NS|NT|NU|ON|PE|QC|SK|YT)\b/;
-
-		// Determine components based on length of parts
-		if (parts.length === 1) {
-			city = parts[0];
-		} else if (parts.length === 2) {
-			city = parts[0];
-			province = parts[1];
-		} else if (parts.length === 3) {
-			city = parts[0];
-			province = parts[1];
-			country = parts[2];
-		} else {
-			// Assuming the format: street address, city, province postal code, country
-			streetAddress = parts[0];
-			city = parts[1];
-
-			// Identify postal code and province
-			const postalMatch = postalCodePattern.exec(parts[2]);
-			if (postalMatch) {
-				postalCode = postalMatch[0];
-				const provinceMatch = provincePattern.exec(parts[2]);
-				if (provinceMatch) {
-					province = provinceMatch[0];
-				}
-			} else {
-				province = parts[2];
-			}
-
-			// Country is usually the last part
-			country = parts[3];
-		}
-
-		return {
-			streetAddress,
-			city,
-			province,
-			postalCode,
-			country
-		};
-	}
 	function getLngAndLat(candidate) {
 		const { geometry } = candidate;
 		return geometry.location;
@@ -136,7 +83,7 @@
 		// console.log({ add });
 	}
 	const debouncedSearch = debounceAsync(search, 100);
-	const temp = ['milt'];
+	// const temp = ['milt'];
 	// onMount(async () => {
 	// 	currText = 'milton library';
 	// 	await debouncedSearch(currText);
@@ -156,7 +103,7 @@
 <!-- <Input type="text" placeholder="Enter location"> </Input> -->
 <div class="cont">
 	<div class="input-field">
-		<span class="icon"><MapPin color="rgb(208, 185, 159)" /></span>
+		<span class="icon"><MapPin color="white" /></span>
 
 		<input
 			bind:value={currText}
@@ -197,10 +144,13 @@
 		border-bottom-left-radius: var(--radius);
 		border-bottom-right-radius: var(--radius);
 		overflow: hidden;
+		/* border: 1px solid red; */
+		box-shadow: 0 0 5px 0px rgb(126, 126, 126);
 	}
 	.cont {
-		width: 400px;
+		width: 100%;
 		position: relative;
+		
 	}
 	.input-field {
 		display: flex;
@@ -228,7 +178,7 @@
 	}
 	input.result-exists:focus {
 		/* background-color: red; */
-		border: 4px solid rgb(255, 255, 255);
+		/* border: 4px solid rgb(255, 255, 255); */
 	}
 	.location {
 		display: flex;

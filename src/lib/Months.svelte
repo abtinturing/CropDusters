@@ -14,11 +14,14 @@
 		'November',
 		'December'
 	];
-  export let selected ={ value: 0, label: months[0] }
+	const currentDate = new Date();
+	const currentMonthNumber = currentDate.getMonth();
+
+  export let selected ={ value: currentMonthNumber, label: months[currentMonthNumber] }
 </script>
 
 <Select.Root bind:selected={selected}>
-	<Select.Trigger class="w-[180px] h-[56px] bg-primary text-white" >
+	<Select.Trigger class="w-[140px] h-[56px] bg-primary text-white" >
 		<Select.Value placeholder="Month" />
 	</Select.Trigger>
 	<Select.Content>

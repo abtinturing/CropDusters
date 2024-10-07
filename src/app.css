@@ -74,6 +74,33 @@
 
 		--ring: 240 4.9% 83.9%;
 	}
+	*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+video {
+	max-width: 100%;
+	display: block;
+}
+img {
+	font-style: italic;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+
+	user-select: none;
+	
+	object-fit: cover;
+}
+
 }
 
 @layer base {

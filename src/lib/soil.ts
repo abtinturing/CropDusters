@@ -1,5 +1,7 @@
 export const soilTypes = {
   sandy: {
+    img: "sandySoil.jpeg",
+    rive: "sandy.riv",
     characteristics: [
       "Large particles and pore spaces",
       "Drains quickly",
@@ -15,20 +17,20 @@ export const soilTypes = {
     ],
     irrigations: [
       {
-        title: "Frequent, Light Irrigation",
-        description: "They can't hold in large amounts of water, so they benefit from frequent, light applications of water to maintain consistent moisture levels."
-      },
-      {
         title: "Drip Irrigation",
-        description: "Slow and steady water directly to the root zone minimizes water loss due to drainage."
+        img: "drip.jpg",
+        description: "The most suitable method for frequent, light irrigation. It delivers a slow and steady flow of water directly to the root zone, reducing water loss through evaporation or runoff. This allows the soil to absorb small amounts consistently, maintaining the desired moisture levels."
       },
       {
-        title: "Sprinkler Irrigation (Small amount, frequent intervals)",
-        description: "If drip irrigation is not feasible, sprinklers that release small amounts of water at frequent intervals can be used."
+        title: "Sprinkler Irrigation (With small amounts at frequent intervals)",
+        img: "sprinkler.jpg",
+        description: "If drip irrigation is not feasible, sprinklers can be adjusted to release water in short, frequent cycles. This method mimics light rainfall and can cover larger areas, though it is less precise compared to drip irrigation."
       }
     ]
   },
   silt: {
+    img: "siltSoil.jpeg",
+    rive: "silt.riv",
     characteristics: [
       "Small particles",
       "Stable moisture levels",
@@ -44,20 +46,20 @@ export const soilTypes = {
     ],
     irrigations: [
       {
-        title: "Moderate, Regular Irrigation",
-        description: "Silt soils retain water longer than sandy soils but drain faster than clay. Regular, moderate irrigation helps maintain consistent moisture without waterlogging."
-      },
-      {
         title: "Sprinkler Irrigation",
-        description: "Effective for silt soils as it provides even distribution of water, helping prevent surface crusting and runoff."
+        img: "sprinkler.jpg",
+        description: "Ideal for silt soils, as it provides an even distribution of water across the surface. This method helps prevent surface crusting and reduces the risk of runoff, ensuring water is absorbed effectively. Setting the sprinklers to moderate, regular intervals keeps moisture balanced without overwhelming the soil."
       },
       {
         title: "Drip Irrigation",
-        description: "Delivers water directly to the root zone, reducing water loss through evaporation and runoff. Useful for maintaining moisture balance in silt soil."
+        img: "drip.jpg",
+        description: "Suitable for maintaining moisture in silt soils by delivering water directly to the root zone. This method reduces water loss through evaporation and runoff, helping maintain the moisture balance that silt soils require. Regular, moderate drip irrigation ensures roots receive sufficient moisture while avoiding waterlogging."
       }
     ]
   },
   clay: {
+    img: "claySoil.jpeg",
+    rive: "clay.riv",
     characteristics: [
       "Tiny, tightly packed particles",
       "Retains water the best",
@@ -73,20 +75,20 @@ export const soilTypes = {
     ],
     irrigations: [
       {
-        title: "Deep Irrigation",
-        description: "Clay absorbs water slowly, so it benefits from slow, deep watering to avoid water pooling on the surface. This ensures water penetrates deeply into the soil, reducing the risk of waterlogging."
+        title: "Subsurface Irrigation",
+        img: "subsurface.jpg",
+        description: "In cases where minimizing surface runoff and evaporation is a priority, subsurface irrigation is effective. It involves placing irrigation lines below the soil surface to deliver water directly to the root zone. This method keeps the surface dry, reduces evaporation, and ensures deep hydration for plants, making it well-suited for clay soils."
       },
       {
         title: "Drip Irrigation",
-        description: "Delivers water gradually, allowing the soil to absorb it without becoming oversaturated. Prevents surface runoff and ensures water reaches the root zone."
+        img: "drip.jpg",
+        description: "An excellent method for clay soils as it delivers water slowly and directly to the root zone. This gradual application allows clay to absorb water effectively without becoming oversaturated, preventing surface runoff. By maintaining a deep watering approach, drip irrigation ensures the roots receive the moisture they need."
       },
-      {
-        title: "Subsurface Irrigation",
-        description: "Useful in specific cases where reducing surface runoff and evaporation is critical, while directly hydrating plant roots."
-      }
     ]
   },
   loam: {
+    img: "loamSoil.jpeg",
+    rive: "loam.riv",
     characteristics: [
       "Balanced mix of sand, silt, and clay",
       "Good drainage while retaining moisture",
@@ -102,17 +104,20 @@ export const soilTypes = {
     ],
     irrigations: [
       {
+        title: "Furrow or Basin Irrigation",
+        img: "furrow.jpg",
+        description: "Suitable for loamy soils in larger agricultural settings. This method allows water to seep gradually into the soil, taking advantage of loam's good infiltration rate. It helps distribute moisture evenly across the root zone while preventing waterlogging."
+      },
+      {
         title: "Drip Irrigation",
-        description: "Provides slow and steady water directly to the root zone, minimizing water loss due to drainage."
+        img: "drip.jpg",
+        description: "Ideal for loamy soils as it provides slow, steady water directly to the root zone. Loam's balanced texture allows the water to be absorbed efficiently, minimizing water loss due to drainage while maintaining consistent soil moisture."
       },
       {
         title: "Sprinkler Irrigation",
-        description: "Covers a large area and distributes water evenly, making it effective for various crop types."
+        img: "sprinkler.jpg",
+        description: "Effective for loamy soils, especially in diverse agricultural setups. Sprinklers cover a large area and distribute water evenly, matching loam's capacity to retain water without causing runoff. Adjusting sprinkler intervals ensures optimal moisture levels for various crops."
       },
-      {
-        title: "Furrow or Basin Irrigation",
-        description: "Useful for loamy soils in larger agricultural settings, allowing water to seep into the soil gradually."
-      }
     ]
   }
 };

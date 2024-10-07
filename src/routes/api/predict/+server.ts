@@ -1,6 +1,7 @@
 
 import { wait } from '$lib/serverUtils';
 import { json } from '@sveltejs/kit';
+import { MODEL_KEY } from '$env/static/private';
 
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -24,7 +25,7 @@ export const GET: RequestHandler = async ({ url }) => {
       'Content-Type': 'application/json',
     },
 		body: JSON.stringify({
-			features: [[lat, lng, month]]
+			features: [[lat, lng, month,MODEL_KEY]]
 		})
 	});
 	const data = await response.json();

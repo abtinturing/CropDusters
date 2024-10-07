@@ -1,0 +1,24 @@
+{
+  "name": "cropdusters",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@rive-app/canvas": "^2.21.5",
+    "bits-ui": "^0.21.16",
+    "clsx": "^2.1.1",
+    "lucide-svelte": "^0.447.0",
+    "mode-watcher": "^0.4.1",
+    "svelte-sonner": "^0.3.28",
+    "tailwind-merge": "^2.5.3",
+    "tailwind-variants": "^0.2.1",
+    "@sveltejs/kit": "^2.0.0",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
